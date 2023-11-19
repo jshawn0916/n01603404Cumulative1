@@ -1,0 +1,24 @@
+﻿@model IEnumerable<n01603404Cumulative1.Models.Class>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<p>This page should be showing information about all Classes</p>
+
+<div id="containerlist">
+    <h2>List of Classes</h2>
+    @foreach (var classes in Model)
+    {
+        <div class="listitem row">
+            <div class="col-md-12">
+                <p>Class name : @classes.Classname</p>
+                <p>Class code : @classes.ClassCode</p>
+                <p>Class id : @classes.ClassId</p>
+                <p>Teacher id : @classes.TeacherId</p>
+                <p>Start Date : @classes.StartDate</p>
+                <p>Finish Date : @classes.FinishDate</p>
+            </div>
+        </div>
+    }
+</div>
